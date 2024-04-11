@@ -5,7 +5,7 @@ import {GetNowYear} from './getNowYear'
 function App() {
 
     return (
-        <div className="App">
+        <div className="App"> /* императивный подход*/
             <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo"/>
                 <p>
@@ -19,7 +19,7 @@ function App() {
                 >
                     Learn React1
                 </a>
-                <GetNowYear/>
+                <GetNowYear/> /*декларативный подход*/
             </header>
         </div>
     );
