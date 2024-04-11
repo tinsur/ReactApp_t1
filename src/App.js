@@ -1,27 +1,44 @@
 import logo from './logo.svg';
 import './App.css';
-import {GetNowYear} from './getNowYear'
+import {GetNowYear} from './getNowYear';
+import {createElement} from 'react';
 
 function App() {
 
-    return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo"/>
-                <p>
-                    Edit <code>src/App.js</code> and save to reload.
-                </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React1
-                </a>
-                <GetNowYear/>
-            </header>
-        </div>
+    return createElement(
+        'div',
+        {className: 'App'},
+        'Hello ',
+        createElement(
+            'header',
+            {className: 'App-header'},
+            createElement(
+                'img',
+                {className: "App-logo", src: logo, alt: 'logo'}
+            ),
+            createElement(
+                'p',
+                null,
+                'Edit ',
+                createElement(
+                    'code',
+                    null,
+                    'src/App.js',
+                ),
+                ' and save to reload.'
+            ),
+            createElement(
+                'a',
+                {
+                    className: "App-link",
+                    href: "https://reactjs.org",
+                    target: "_blank",
+                    rel: "noopener noreferrer"
+                },
+                'Learn React1'),
+            createElement(GetNowYear,null)
+        )
+
     );
 }
 
